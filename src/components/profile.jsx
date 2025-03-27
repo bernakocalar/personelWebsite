@@ -1,5 +1,7 @@
+import { useLanguage } from "../hooks/Language";
+
 export default function Profile({mediumImg}) {
-  
+  const { t } = useLanguage();
 
     return (
         <section className="grid grid-cols-3 items-center gap-8 p-8 bg-[#4731D3]">

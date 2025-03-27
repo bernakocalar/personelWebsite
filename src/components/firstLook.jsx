@@ -1,35 +1,37 @@
 import { useLanguage } from "../hooks/Language";
 
-export default function FirstLook({mediumImg}) {
+export default function FirstLook({ mediumImg, linkedinIcon, githubIcon }) {
     const { t, toggleLanguage } = useLanguage();
     return (
-         <section className="h-180 flex flex-col md:flex-row items-center justify-between bg-[linear-gradient(to_right,#4731D3_75%,#CBF281_25%)]">
-
-        <div className="flex flex-col md:flex-row items-center mx-20">
-            <div className="ml-28 text-left space-y-4">
-                <h1>Berna</h1>
-                <h2 className="text-6xl text-[#CBF281] my-1rem">I am a Frontend
-                Developer...</h2>
-                <p className="text-2xl text-[#FFFFFF] my-1rem">...who likes to craft solid and scalable frontend products with great user experiences.</p>
+        
+         <section className="w-full h-[671px] flex flex-col items-center bg-[linear-gradient(to_right,#4731D3_76%,#CBF281_24%)]">
+        <div className="w-8/12 flex mx-20 h-1/5 items-center justify-between ">
+                <h1 className="text-[#CBF281] text-4xl ml-20">Berna</h1>
+                <div className=" font-bold text-3xl flex items-center">
+        <button onClick={toggleLanguage} className="text-[#CBF281]" >{t.changeLang}</button>
+        <h1 className="text-[#3730A3]">{t.darkMode}</h1>
+        </div>
+                </div>
+        <div className="flex items-center mx-20 h-3/5 w-8/12">
+            <div className="ml-28 text-left space-y-4 ">
+                <h2 className="text-6xl text-[#CBF281] my-1rem">{t.frontendDeveloper.title}</h2>
+                <p className="text-2xl text-[#FFFFFF] my-1rem">{t.frontendDeveloper.description}</p>
                 <div className=" flex gap-3 mt-4">
-                    <button className="bg-white text-#4731D3 py-2 px-4 rounded">
-                        <icon></icon>
-                        <p >Github</p>
+                    <button className="bg-white text-#4731D3 py-2 px-4 rounded flex items-center gap-2">
+                        <img src={githubIcon}/>
+                        <p className="text-[#3730A3]">Github</p>
                     </button>
-                    <button className="bg-white text-#4731D3 py-2 px-4 rounded">
-                        <icon></icon>
-                        <p>Linkedin</p>
+                    <button className="bg-white text-#4731D3 py-2 px-4 rounded flex items-center gap-2">
+                        <img src={linkedinIcon}/>
+                        <p className="text-[#3730A3]">Linkedin</p>
                     </button>
                 </div>
             </div>
             <div className="flex flex-col size-70 rounded-xl overflow-hidden bg-pink-500 mx-30">
-            <div className="flex">
-        <h1 className="mt-1">{t.welcome}</h1>
-        <button onClick={toggleLanguage}>{t.changeLang}</button>
-                </div>
-                <img src={mediumImg} alt="Almila" />
-            </div>
+            <img src={mediumImg} alt="Almila" />
+        </div>
         </div>
         </section>
+        
     );
 }

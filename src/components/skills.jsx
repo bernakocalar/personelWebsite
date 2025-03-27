@@ -7,7 +7,7 @@ export default function Skills() {
     const jsLogo = "/assets/javascript.png";
   
     return (
-      <section className="grid grid-cols-3 gap-8">
+      <section className="grid grid-cols-3 gap-8 mx-60">
         {/* 1. Sütun */}
         <div className="flex flex-col gap-8">
           <h2 className="text-6xl font-bold mt-4 text-[#4731D3]" >Skills</h2>
