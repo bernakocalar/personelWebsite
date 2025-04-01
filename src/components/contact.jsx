@@ -1,12 +1,12 @@
+import TestAPI from "../services/api";
+
 export default function Contact() {
     return (
-        <section>
-        <h2>Send me a message!</h2>
-        <p>gfdgdgd</p>
-        <link></link>
-        <div>
-            
-        </div>
+        <section className="flex flex-col items-center justify-center my-3.5 space-y-4 py-10">
+        <h2 className="text-[#4731D3] text-4xl">Send me a message!</h2>
+        <p className="text-black text-2xl">Got a question or proposal, or just want
+        to say hello? Go ahead.</p>
+<TestAPI/>
         </section>
     )
 };
